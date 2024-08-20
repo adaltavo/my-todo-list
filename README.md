@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+# Description
+This is the greatest invention after the wheel. Imagine being able to write down all your pending task in a single place and track them down until they're done! Well, with this app you'll be able to do it!
 
+<img width="1511" alt="Screenshot 2024-08-19 at 9 14 16 p m" src="https://github.com/user-attachments/assets/2e660e1a-6ac7-4044-a183-3927792f3462">
+
+It also looks awesome in mobile devices!
+
+<img width="424" alt="Screenshot 2024-08-19 at 9 15 36 p m" src="https://github.com/user-attachments/assets/7d2ac59a-30c2-4a78-bad2-db8898f18e0e">
+
+
+## Get me Started!
+
+  
+
+Just make sure you have `nvm` , clone this repo, and then run these commands within the project's directory:
+
+  
 ```bash
+# First, use the right node version:
+nvm install
+# Second, install dependencies:
+npm install
+
+# Third, create your environment setup in a .env file,
+#   Use the '.env.local.example' as a guide.
+
+# Finally, run in dev mode:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Or if you prefer a production build:
+npm run build && npm run start
+
+# Or if you prefer using Docker instead:
+docker build -t my-todo-list .
+
+docker run -p 3000:3000 nextjs-docker
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to start the magic.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+ 
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+This project's architecture is possible thanks to:
+* React
+* NextJS
+* Apollo
+* Graphql
+* TailwindCSS
+* Jest
+* Typescript
+* Docker
+* Node
+* ESlint
+* Husky
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
