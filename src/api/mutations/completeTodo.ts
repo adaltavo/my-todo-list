@@ -4,7 +4,8 @@ import { RequestResponse } from "@/src/types/RequestResponse";
 
 export const completeTodoMuation = gql`
   mutation CompleteTodoMuation($isComplete: Boolean!, $id: String!) {
-    completeTodoMutation(input: {isComplete: $isComplete, id: $id}) @rest(type: "Todo", path: "/patch/{args.input.id}/", method: "PATCH") {
+    completeTodoMutation(input: { isComplete: $isComplete, id: $id })
+      @rest(type: "Todo", path: "/patch/{args.input.id}/", method: "PATCH") {
       ...TodoTask
     }
   }
@@ -13,14 +14,15 @@ export const completeTodoMuation = gql`
 `;
 
 export const useUpdateTodo = () => {
-  const [updateTodo, { data, loading, error} ] = useMutation(completeTodoMuation);
+  const [updateTodo, { data, loading, error }] =
+    useMutation(completeTodoMuation);
   if (process.env.USE_MOCK_DATA) {
-    const mockData: RequestResponse = { status: "success"};
+    const mockData: RequestResponse = { status: "success" };
     return {
       updateTodo: () => {},
       data: mockData,
       loading: false,
-      error: null
+      error: null,
     };
   }
 
@@ -28,6 +30,6 @@ export const useUpdateTodo = () => {
     updateTodo,
     data,
     loading,
-    error
+    error,
   };
 };

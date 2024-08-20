@@ -7,7 +7,12 @@ import { useUpdateTodo } from "@/src/api/mutations/completeTodo";
 
 export type ListItemProps = TodoTask;
 
-export function ListItem({ id, description, dueDate, isComplete }: ListItemProps) {
+export function ListItem({
+  id,
+  description,
+  dueDate,
+  isComplete,
+}: ListItemProps) {
   const [checked, setChecked] = useState(isComplete);
   const { updateTodo } = useUpdateTodo();
 
@@ -19,9 +24,9 @@ export function ListItem({ id, description, dueDate, isComplete }: ListItemProps
         id,
         description,
         dueDate,
-        isComplete: !checked
-      }
-    })
+        isComplete: !checked,
+      },
+    });
   };
 
   const backgroundColor = getBackgroundColor(checked, dueDate);
@@ -34,7 +39,9 @@ export function ListItem({ id, description, dueDate, isComplete }: ListItemProps
       <section>
         <Checkbox checked={checked} />
       </section>
-      <section className={`${checked ? 'line-through' : null} truncate`}>{description}</section>
+      <section className={`${checked ? "line-through" : null} truncate`}>
+        {description}
+      </section>
       {dueDate !== null ? (
         <section className="ml-auto no-underline border border-solid border-black pl-2 pr-2 min-w-28 flex justify-center">
           {formatedDueDate}
