@@ -21,6 +21,7 @@ export function List({ data }: ListProps) {
       {sortedItems.map((item) => (
         <ListItem
           key={item.id}
+          id={item.id}
           description={item.description}
           dueDate={item.dueDate}
           isComplete={item.isComplete}

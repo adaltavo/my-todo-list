@@ -3,17 +3,19 @@ import { render, screen } from "@testing-library/react";
 import { ListItem } from "@/src/components/client/ListItem/ListItem";
 
 const mockData = {
+  id: "505",
   description: "File 2023 Taxes",
   isComplete: true,
   dueDate: "2023-03-10T17:50:44.673Z",
 };
 
 describe("<ListItem />", () => {
-  const { description, isComplete, dueDate } = mockData;
+  const { description, isComplete, dueDate, id } = mockData;
 
   it("renders the list item component", () => {
     render(
       <ListItem
+        id={id}
         description={description}
         isComplete={isComplete}
         dueDate={dueDate}
@@ -28,6 +30,7 @@ describe("<ListItem />", () => {
   it("renders the list item component unchecked", () => {
     render(
       <ListItem
+        id={id}
         description={description}
         isComplete={false}
         dueDate={dueDate}
@@ -42,6 +45,7 @@ describe("<ListItem />", () => {
   it("renders the list item component checked", () => {
     render(
       <ListItem
+        id={id}
         description={description}
         isComplete={true}
         dueDate={dueDate}

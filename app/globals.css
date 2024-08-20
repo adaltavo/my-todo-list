@@ -12,6 +12,7 @@
   --list-item-completed-bg: rgba(204, 255, 204, 255);
   --list-item-neutral-bg: rgba(238, 238, 238, 255);
   --list-item-due-bg: rgba(255, 204, 204, 255);
+  --list-item-ring-bg: rgba(56, 62, 84, 255);
 }
 
 body {
