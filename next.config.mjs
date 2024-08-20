@@ -3,7 +3,7 @@ const nextConfig = {
   eslint: {
     dirs: ["src/components/*"],
   },
-  output: "standalone"
+  output: "standalone",
 };
 
 export default nextConfig;

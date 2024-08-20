@@ -8,13 +8,10 @@ type ListProps = {
 };
 
 export function List({ data }: ListProps) {
-
   if (data === null) {
     return (
       <div className="p-3 flex flex-col gap-3">
-        <p>
-          Congrats!(?)... No Todos were found
-        </p>
+        <p>Congrats!(?)... No Todos were found</p>
       </div>
     );
   }
