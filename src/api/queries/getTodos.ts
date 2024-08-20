@@ -15,7 +15,7 @@ export const getTodosQuery = gql`
 `;
 
 export const getTodos = async () => {
-  if (process.env.USE_MOCK_DATA === 'true') {
+  if (process.env.USE_MOCK_DATA === "true") {
     const data: Array<TodoTask> = await new Promise((resolve) =>
       setTimeout(() => resolve(mockListResponse), 1000),
     );

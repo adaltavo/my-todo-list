@@ -16,7 +16,7 @@ export const completeTodoMuation = gql`
 export const useUpdateTodo = () => {
   const [updateTodo, { data, loading, error }] =
     useMutation(completeTodoMuation);
-  if (process.env.USE_MOCK_DATA === 'true') {
+  if (process.env.USE_MOCK_DATA === "true") {
     const mockData: RequestResponse = { status: "success" };
     return {
       updateTodo: () => {},
